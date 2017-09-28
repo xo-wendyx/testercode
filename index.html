@@ -17,37 +17,41 @@
 
 <body>
 
-  <header>
-    <h1 class="header">Deepti's Travel's</h1>
-    <h2 class="subheader">"We travel not to escape life, but for life not to escape us"</h2>
-  </header>
-	
-  <div class="row1">
-    <h1>Home is where the heart is</h1>
-    <img src="croatia3.jpg"/ class="rect">
-    <img src="indiacolor.jpg" class="round"/>
-    <p>text here</p>
-    <img src="paris4.jpg" class="round"/>
-    <img src="russia1.jpg" class="rect"/>
-  </div>
+ 
+  <section>
+ <img class="slideshow" src="1.png"
+ style="width:100%">
+ <img class="slideshow" src="2.png"
+ style="width:100%">
+ <img class="slideshow" src="3.png"
+ style="width:100%">
+</section>
+   <!-- Slide Show Ends here -->
   
-  <div class="row2">
-    <p>text here</p>
-    <img src="" class=""/>
-    <img src="" class=""/>
-  </div>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+
+function carousel() {
+   var i;
+   var x = document.getElementsByClassName("slideshow");
   
-  <div class="slideshow">
-    
-  </div>
-  
-  <div class="row2pt2">
-    <p>text here</p>
-    <img src="" class=""/>
-    <img src="" class=""/>
-  </div>
-	
- <embed src="" auto="true" loop="">
+   for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     //x[i].parentNode.removeChild(x[i]);
+
+
+   }
+   myIndex++;
+   if (myIndex > x.length) {myIndex = 1}
+   x[myIndex-1].style.display = "block";
+
+
+   setTimeout(carousel, 3000);
+}</script>
+
 	
 </body>
 
